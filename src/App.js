@@ -10,7 +10,7 @@ import ConsumerProvider from './utils/ConsumerContext';
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 import ScrollToTop from './utils/ScrollToTop';
-
+//ok
 
 const stripePromise = loadStripe('pk_test_51JjhRnLiea7p0n0HUnks0w0ZwHFJC3jHH6wKqSw13QHcwO5QRvi7bQoB7FZIeWdkBI3qUoqC0vtHe8wAXI4Yq5BG00ZLAjHxJe');
 
