@@ -1,6 +1,6 @@
 import ky from 'ky';
 
-const baseUrl = 'http://localhost:7979';
+const baseUrl = 'https://jrmj-edge-service.herokuapp.com/';
 
 // translate to ky:
 // await axios.post("http://localhost:7979/charge", "", {
