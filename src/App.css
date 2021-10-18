@@ -1,0 +1,752 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: unset;
+  width:100%;
+  overflow-x: hidden;
+}
+
+:root{
+  --main-bg-color: black;
+  --main-text-color: white;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 0;
+}
+
+
+
+/* -----------------------------------------------------------NAVBAR */
+
+.message {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  font-size: .8rem;
+  padding: .3rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-bottom-style: none;
+  display: none;
+  width:100%;
+  overflow:hidden;
+  }
+
+ 
+.scroll-text {
+  text-align: right;
+
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -moz-animation: my-animation 25s ease-in-out infinite;
+  -webkit-animation: my-animation 25s ease-in-out infinite;
+  animation: my-animation 25s ease-in-out infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+.scroll-text:hover {
+  animation-play-state: paused;
+}
+
+
+
+
+.nav-wrapper {
+  display: flex;
+  position:fixed;
+  width: 35%;
+  min-height: 100vh;
+  float: left;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2rem;
+  margin-top: .2rem;
+  padding-left: 1rem;
+  
+
+}
+
+
+.logo{
+  padding-bottom: 2rem;
+
+}
+.logo a {
+  color: var(--main-text-color);
+  text-decoration: none;
+
+}
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+ul {
+  padding-bottom: 2rem;
+
+}
+
+li a {
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+
+.cart-logo {
+  width: 2rem;
+  height: 2rem;
+}
+
+
+  /* TO set content for mobile */
+.content {
+  float: right;
+  width: 65%;
+  padding-left:2px;
+}
+/* -----------------------------------------------------homepage */
+
+.banner {
+  width: 100%;
+
+}
+
+.banner-others {
+  display:none;
+}
+
+.results-wrapper {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 1rem 1rem 1rem;
+
+}
+
+.filter-button {
+  width:6rem;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  padding: .2rem;
+
+}
+
+.results {
+  font-weight: bolder;
+}
+
+
+
+/* ----------------------------------------------------------------SHOE CARDS */
+
+.card-wrapper {
+  border: .1rem solid var(--main-bg-color);
+  margin-left: auto;
+  margin-right: auto;
+  margin: 1rem auto 1rem auto;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.shoe-card-img {
+align-self: center;
+  max-width: 50%;
+
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+
+}
+
+.card-left {
+width:45%;
+padding-left: 5%;
+/* flex-grow: 1; */
+flex-basis: 1 1 100%;
+
+}
+
+.card-right {
+  padding-right: 5%;
+
+}
+
+.shoe-brand-font {
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.shoe-font{
+  font-size: .8rem;
+}
+
+.shoe-price-font{
+  font-size: 1.3rem;
+  font-weight: bolder;
+
+}
+
+.add-to-cart {
+  padding-left:.3rem;
+  padding-right: .3rem;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+
+}
+
+.login-to-shop {
+  padding-left:.3rem;
+  padding-right: .3rem;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  font-size: 0.85rem;
+}
+
+.login-to-shop span {
+    /* animation for text fade out */
+    transition: all 0.6s;
+    opacity: 0;
+    -moz-animation: animate-fade-out 5s ease-out;
+    -webkit-animation: animate-fade-out 5s ease-out;
+    animation: animate-fade-out 5s ease-out;
+}
+
+/* for Firefox */
+@-moz-keyframes animate-fade-out {
+  from { opacity: 1;}
+  to { opacity: 0; }
+}
+
+/* for Chrome */
+@-webkit-keyframes animate-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes animate-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.login-to-shop span:hover {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------Cart */
+
+.checkout-button {
+  width:6rem;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  padding: .2rem;
+}
+
+.clear-button {
+  width:4rem;
+  padding: .2rem;
+}
+
+
+/* --------------------------------------------------------------Forms */
+
+.form-page-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+}
+
+.loginTitle {
+  text-align: center;
+  font-family: cursive;
+  font-weight: bolder;
+  padding: 2rem;
+}
+.loginCard {
+  align-items: center;
+  padding: 3em;
+}
+ input {
+   border: 2px solid var(--main-bg-color);
+   padding-left: .3rem;
+ }
+
+.img-wrapper {
+  width: 50%;
+  display: none;
+}
+
+.explore-image-wrapper {
+  width:50%;
+}
+
+.form-img {
+  width: 85%;
+  display: none;
+ }
+
+ .explore-img {
+  width: 100%;
+  align-self: center;
+ }
+
+ .explore-wrapper p {
+  text-align: center;
+  padding: 1rem;
+}
+
+.shop-phrase {
+  text-align: center;
+  margin-top: 2rem;
+}
+.testWrapper {
+  display: flex;
+  justify-content: center;
+  width:50%;
+}
+
+.submitBtn {
+  text-align: center;
+  width: 100%;
+  margin: 1rem 0;
+  
+}
+
+.submitLoginBtn {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  width: 100%;
+}
+
+.signupInstead {
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 1rem;
+}
+/* -----------------------------------------------------------UserProfilePage */
+
+.profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: black solid 2px;
+
+}
+
+.form-group {
+  margin: 0.6rem;
+  width: 41vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-form-address {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 1rem;
+}
+
+.profile-form-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  border-bottom: black solid 2px;
+  width: 45vw;
+  text-align: center;
+  margin: 1rem;
+}
+
+.smaller-input-state {
+  width: 15%;
+}
+
+.smaller-input-zip {
+  width: 28%;
+}
+
+.logout-btn-wrapper {
+  width: 75vw;
+}
+
+.logoutBtn {
+  background-color: white;
+  color: rgb(226, 0, 0);
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.5rem;
+  margin: 2rem 1rem;
+  float: right;
+}
+
+.submit-btn-wrapper {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  width: 40vw;
+}
+/* -----------------------------------------------------------Footer */
+
+.footer {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem;
+
+}
+
+.company-name {
+  font-weight: bolder;
+  padding-top: 1rem;
+
+}
+
+.copyright {
+  font-style: italic;
+  padding-top: 1rem;
+
+}
+.catchphrase-container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding-top: 1rem;
+}
+
+.catchphrase {
+  border: 2px dashed black;
+  text-align: center;
+  width:50%;
+  padding: 2rem;
+}
+
+
+
+/* upper limit of mobile devices */
+@media only screen and (min-width: 480px) {
+  
+  html {
+    font-size: 18px;
+  }
+
+}
+
+/* upper limit of ipads and tablets */
+@media only screen and (min-width: 768px) {
+
+
+
+
+  html {
+    font-size: 20px;
+    --lh: 1.3rem;
+    line-height: var(--lh);
+  }
+ 
+  
+  .truncate-overflow {
+    --max-lines: 2;
+    position: relative;
+    max-height: calc(var(--lh) * var(--max-lines));
+    overflow: hidden;
+    padding-right: 1rem; /* space for ellipsis */
+  }
+  .truncate-overflow::before {
+    position: absolute;
+    content: "...";
+    inset-block-end: 0; /* "bottom" */
+    inset-inline-end: 0; /* "right" */
+  }
+  .truncate-overflow::after {
+    content: "";
+    position: absolute;
+    inset-inline-end: 0; /* "right" */
+    width: 1rem;
+    height: 1rem;
+    background: white;
+  }
+
+  
+  .truncate-overflow-brand {
+    --max-lines: 1;
+    position: relative;
+    max-height: calc(var(--lh) * var(--max-lines));
+    overflow: hidden;
+    padding-right: 1rem; /* space for ellipsis */
+  }
+  .truncate-overflow-brand::before {
+    position: absolute;
+    content: "...";
+    inset-block-end: 0; /* "bottom" */
+    inset-inline-end: 0; /* "right" */
+  }
+  .truncate-overflow-brand::after {
+    content: "";
+    position: absolute;
+    inset-inline-end: 0; /* "right" */
+    width: 1rem;
+    height: 1rem;
+    background: white;
+  }
+  
+  
+  
+
+  .super-header {
+    position: sticky;
+    top:0;
+    min-height: 15vh;
+    z-index: 999;
+
+    
+  }
+
+
+  .logo {
+    width: 10vw;
+    padding-left: 4rem;
+    padding-right: .5rem;   
+    display: -block;
+  }
+
+  
+  .backwards {
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg);
+    -o-transform:rotateY(180deg);
+    -ms-transform:rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+
+  .message {
+    padding: .5rem;
+    display: block;
+    position: relative;
+    min-height: 6vh;
+    
+  }
+  .nav-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 15vh;
+    float: none;
+    padding-top: 2rem;
+    margin-top: 0;
+    flex-direction: row;
+
+      
+  }
+
+  
+  .content {
+    float: none;
+    width: 100%;
+    min-height: auto;
+    padding: 0px;
+  }
+  .hero {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--main-bg-color);
+
+  }
+  .banner {
+    width:34%;
+
+  }
+  .banner-others{
+    display:block;
+    width:34%;
+  }
+
+  .sidebar {
+    flex-direction: row;
+  }
+
+  .nav-links-start {
+    display: flex;
+    justify-content: flex-start;
+    width: 35vw;
+    padding-right: 4rem;
+    padding-left: 3rem;
+    margin-left: 2rem;
+  }
+
+  .nav-links-start li {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .nav-links-end {
+    display: flex;
+    justify-content: flex-end;
+    width: 55vw;
+    padding-right: 8rem;
+    padding-left: .5rem;
+    
+  }
+
+  .nav-links-end li {
+    padding-left: 3rem;
+
+  }
+
+  .card-wrapper {
+    height: calc(100%/3);
+    width: calc(100%/3);
+    margin:0;
+    padding: 1rem .2rem;
+  }
+  .multi-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+
+  .img-wrapper {
+    display: block;
+  }
+
+  .form-page-wrapper{
+    margin-top: -5rem;
+
+  }
+  .form-img {
+    display: block;
+    overflow: hidden;
+  }
+
+  .explore-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: no-wrap;
+    flex-direction: row;
+  }
+
+  .explore-image-wrapper {
+    display: block;
+  }
+
+  
+  .explore-wrapper p {
+    width:65%;
+    text-align: center;
+    padding-left: 5rem;
+  }
+
+  .explore-top-text {
+    margin-left: 5rem;
+
+  }
+
+  .explore-top-img {
+    padding-left: 3rem;
+  }
+
+  .shop-phrase {
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  a {
+    color: black;
+  }
+
+ .loginCard {
+   font-size: 1.5rem;
+   margin-left: 5rem;
+   
+ }
+  
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  
+
+  .company-name {
+    width:33%;
+    text-align: center;
+    
+    }
+  
+  .copyright {
+     width:33%;
+     text-align: center;
+   }
+    
+   .catchphrase-container {
+     width:33%;
+   }
+
+   
+
+}
+
+/* upper limits of smaller screens and laptops */
+@media only screen and (min-width: 1024px) {
+  html {
+    font-size: 20px;
+    }
+  
+    
+}
+
+/* upper limits of desktops and semi-large screens */
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+/* Extra large screens - will look weird regardless unless more content appears... */
+@media only screen and (min-width: 1500px) {
+  html {
+    font-size: 24px;
+  }
+}
