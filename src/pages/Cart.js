@@ -8,7 +8,7 @@ import Total from '../context/Total';
 
 async function handleToken(token) {
   //console.log(token);
-  await axios.post("http://localhost:7979/charge", "", {
+  await axios.post("https://jrmj-edge-service.herokuapp.com/charge", "", {
     headers: {
       token: token.id,
       amount: 500,
